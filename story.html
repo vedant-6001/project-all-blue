@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Story | Project All Blue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { cinzel: ['Cinzel', 'serif'], inter: ['Inter', 'sans-serif'], fira: ['"Fira Code"', 'monospace'], } } } }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #0891b2; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+        .bg-grid-pattern { background-image: linear-gradient(to right, rgba(39, 39, 42, 0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(39, 39, 42, 0.4) 1px, transparent 1px); background-size: 40px 40px; }
+        .typing-cursor::after { content: '_'; animation: blink 1s step-end infinite; color: #22d3ee; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .reveal-item { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .reveal-item.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-inter text-zinc-300 bg-zinc-950 overflow-x-hidden antialiased selection:bg-cyan-500/30 relative">
+
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[10%] left-[-10%] w-[30rem] h-[30rem] bg-cyan-900/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-zinc-800/40 rounded-full blur-[150px]"></div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-950/60 border-b border-cyan-900/30 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+           <a href="index.html" class="font-cinzel text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] transition-transform hover:scale-105">Project All Blue</a>
+            <ul class="flex space-x-6 md:space-x-8 text-sm md:text-base font-medium text-slate-300">
+                <li><a href="sustains.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Sustains</a></li>
+                <li><a href="protects.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Protects</a></li>
+                <li><a href="inspires.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Inspires</a></li>
+                <li><a href="story.html" class="text-cyan-400 border-b-2 border-cyan-400 pb-1">My Story</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 bg-zinc-950 text-center px-4 border-b border-zinc-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/50 via-transparent to-zinc-950 pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+            <h1 id="typewriter-title" class="text-4xl md:text-6xl font-['Fira_Code'] font-light text-cyan-400 tracking-tight mb-4 min-h-[4rem] md:min-h-[5rem]"></h1>
+            <p class="text-zinc-500 tracking-widest uppercase text-sm font-semibold mt-6">My Story // The Builder's Log</p>
+        </div>
+    </header>
+
+    <main class="bg-zinc-950 min-h-screen px-6 py-24 relative">
+        <article class="max-w-3xl mx-auto space-y-12 relative pl-8">
+            
+            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-zinc-800"></div>
+            <div id="scroll-timeline" class="absolute left-0 top-0 w-0.5 bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)] transition-all duration-100 ease-out" style="height: 0%;"></div>
+            
+            <div class="reveal-item relative">
+                <div class="absolute -left-[39px] top-2 w-4 h-4 rounded-full bg-cyan-950 border-2 border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)] z-10"></div>
+                <p class="text-lg md:text-xl leading-relaxed text-zinc-300 font-['Inter'] font-light text-justify">
+                    In the world of One Piece, the All Blue is a mythical sea where waters from across the globe unite, representing a perfectly balanced and thriving ocean. Growing up in a bustling urban environment, the deep sea isn't something I see daily, yet it dictates the rhythm of my life. The ocean sustains our global climate by driving seasonal weather patterns and regulating the very air we breathe. It also silently protects us, acting as a massive global sink for carbon and heat. Because this protection is largely invisible, humanity often takes it for granted, like an unread Poneglyph holding crucial history we fail to decipher.
+                </p>
+            </div>
+
+            <div class="reveal-item relative" style="transition-delay: 150ms;">
+                <div class="absolute -left-[39px] top-2 w-4 h-4 rounded-full bg-cyan-950 border-2 border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)] z-10"></div>
+                <p class="text-lg md:text-xl leading-relaxed text-zinc-300 font-['Inter'] font-light text-justify">
+                    As a Grade 11 CBSE student passionate about computer science and ocean engineering, my connection to the ocean is through the lens of a shipwright and problem solver. Inspired by the incredible underwater adventures and technological marvels in 'The Deep' animated series, I want to use robotics to actively explore and protect marine ecosystems. Designing a submersible mini ROV for my university portfolio serves as my ultimate engineering challenge, requiring me to navigate complex physical constraints like waterproofing, buoyancy, and hydrostatic pressure. By combining advanced coding, structural design, and physical hardware, I want to give the ocean a digital voice and build tools that empower conservation. Protecting our waters requires decisive action. We can build our own All Blue.
+                </p>
+            </div>
+
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const titleElement = document.getElementById('typewriter-title');
+            const textToType = "> Decoding the Poneglyphs";
+            let charIndex = 0;
+            titleElement.classList.add('typing-cursor');
+
+            function typeWriter() {
+                if (charIndex < textToType.length) {
+                    titleElement.textContent += textToType.charAt(charIndex); charIndex++;
+                    setTimeout(typeWriter, Math.floor(Math.random() * (100 - 50 + 1)) + 50);
+                }
+            }
+            setTimeout(typeWriter, 600);
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
+            }, { root: null, rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+            document.querySelectorAll('.reveal-item').forEach(el => revealObserver.observe(el));
+            
+            window.addEventListener('scroll', () => {
+                const timeline = document.getElementById('scroll-timeline');
+                if(timeline) {
+                    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrolled = Math.min((winScroll / height) * 110, 100); 
+                    timeline.style.height = scrolled + "%";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

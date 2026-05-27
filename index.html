@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project All Blue | Bow Seat Ocean Awareness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { cinzel: ['Cinzel', 'serif'], inter: ['Inter', 'sans-serif'], },
+                    animation: { 'bg-zoom': 'bgZoom 20s infinite alternate ease-in-out', 'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite', },
+                    keyframes: { bgZoom: { '0%': { transform: 'scale(1)' }, '100%': { transform: 'scale(1.15)' } } }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #0891b2; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .typing-cursor::after { content: '|'; color: #22d3ee; margin-left: 2px; animation: blink 1s step-end infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .bg-blueprint { background-image: linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="font-inter text-slate-200 bg-slate-950 overflow-x-hidden antialiased selection:bg-cyan-500/30">
+
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-cyan-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-blue-900/20 rounded-full blur-[150px]"></div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-950/60 border-b border-cyan-900/30 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+            <a href="index.html" class="font-cinzel text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] transition-transform hover:scale-105">
+                Project All Blue
+            </a>
+            <ul class="flex space-x-6 md:space-x-8 text-sm md:text-base font-medium text-slate-300">
+                <li><a href="sustains.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Sustains</a></li>
+                <li><a href="protects.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Protects</a></li>
+                <li><a href="inspires.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Inspires</a></li>
+                <li><a href="story.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">My Story</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden bg-slate-950">
+        <div class="absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518837695005-2083093ee354?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-40 animate-bg-zoom origin-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/20 to-slate-950"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col items-center w-full max-w-5xl mt-16">
+            <h1 class="text-5xl md:text-8xl font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-cyan-500 mb-6 drop-shadow-2xl">Project All Blue</h1>
+            <div class="h-24 md:h-12 flex items-center justify-center w-full">
+                <p id="typing-text" class="text-lg md:text-2xl text-cyan-100 max-w-3xl font-inter font-light tracking-wide typing-cursor"></p>
+            </div>
+            <a href="#mission" class="magnetic-btn mt-12 group relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white transition-colors duration-200 bg-cyan-900/50 border border-cyan-500/50 rounded-full hover:bg-cyan-800 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]">
+                <span class="pointer-events-none transition-transform duration-200">Set Sail <i class="fa-solid fa-arrow-down ml-3 group-hover:translate-y-1 transition-transform"></i></span>
+            </a>
+        </div>
+    </header>
+
+    <section id="mission" class="py-32 bg-gradient-to-b from-slate-950 to-slate-900 text-slate-300 px-6">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <i class="fa-solid fa-compass text-4xl text-cyan-500/50 mb-8 animate-pulse-slow"></i>
+            <p class="text-xl md:text-2xl leading-relaxed font-light text-slate-300 drop-shadow-md">
+                "In the world of One Piece, the All Blue is a legendary sea where all global waters and ecosystems unite in perfect harmony. To find it and to protect our own oceans we cannot just be observers; <span class="text-cyan-400 font-medium">we must be shipwrights</span>. By using technological innovation as our compass, this project seeks to decode the ocean's deepest mysteries and invisible data."
+            </p>
+            <div class="w-24 h-px bg-gradient-to-r from-transparent via-cyan-600 to-transparent mx-auto mt-12"></div>
+        </div>
+    </section>
+
+    <section class="pb-32 bg-slate-900 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="sustains.html" class="reveal block group relative bg-white/5 border border-white/10 p-8 rounded-xl transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] overflow-hidden hover:-translate-y-1">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <i class="fa-solid fa-water text-3xl text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300 origin-left"></i>
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">I. Sustains: The Unified Currents</h3>
+                    <p class="text-slate-400 font-light leading-relaxed group-hover:text-slate-200 transition-colors">Decode the biological and meteorological data of Earth's ultimate life-support system.</p>
+                </div>
+            </a>
+
+            <a href="protects.html" class="reveal block group relative bg-white/5 border border-white/10 p-8 rounded-xl transition-all duration-300 hover:border-green-400 hover:shadow-[0_0_30px_rgba(74,222,128,0.2)] overflow-hidden hover:-translate-y-1" style="transition-delay: 100ms;">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 to-green-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <i class="fa-solid fa-shield-halved text-3xl text-green-400 mb-6 group-hover:scale-110 transition-transform duration-300 origin-left"></i>
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">II. Protects: Navigating the Calm Belt</h3>
+                    <p class="text-slate-400 font-light leading-relaxed group-hover:text-slate-200 transition-colors"></p>Explore the ocean's role as a planetary buffer and how we can restore the natural shields that keep our climate in balance.</p>
+                </div>
+            </a>
+
+            <a href="inspires.html" class="reveal block group relative bg-black/40 border border-white/10 p-8 rounded-xl transition-all duration-300 hover:border-blue-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] overflow-hidden hover:-translate-y-1" style="transition-delay: 200ms;">
+                <div class="absolute inset-0 bg-blueprint opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <i class="fa-solid fa-gears text-3xl text-blue-500 mb-6 group-hover:scale-110 transition-transform duration-300 origin-left"></i>
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-3">III. Inspires: The Shipwright's Blueprint</h3>
+                    <p class="text-slate-400 font-light leading-relaxed group-hover:text-slate-200 transition-colors">Examine how extreme marine environments drive technological innovation and how oceanic stories shape our commitment to the sea.</p>
+                </div>
+            </a>
+
+            <a href="story.html" class="reveal block group relative bg-slate-950 border border-white/10 p-8 rounded-xl transition-all duration-300 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] overflow-hidden hover:-translate-y-1" style="transition-delay: 300ms;">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <i class="fa-solid fa-terminal text-3xl text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300 origin-left"></i>
+                    <h3 class="font-mono text-xl md:text-2xl font-bold text-white mb-3 tracking-tight">IV. Your Story: Decoding the Poneglyphs</h3>
+                    <p class="text-slate-400 font-light leading-relaxed group-hover:text-slate-200 transition-colors">A personal log on using robotics and engineering to give the ocean a digital voice.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-6">
+        <div class="max-w-6xl mx-auto text-center flex flex-col items-center">
+            <div class="text-cyan-500/50 mb-4"><i class="fa-solid fa-anchor text-2xl"></i></div>
+            <p class="text-slate-500 text-sm">Project All Blue &copy; 2026. Created for the Bow Seat Ocean Awareness Contest.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textString = "Charting a sustainable future at the intersection of marine ecosystems and hardware engineering.";
+            const typingElement = document.getElementById('typing-text');
+            let index = 0;
+            setTimeout(() => {
+                function typeWriter() {
+                    if (index < textString.length) {
+                        typingElement.innerHTML += textString.charAt(index);
+                        index++;
+                        let typeSpeed = Math.floor(Math.random() * (60 - 30 + 1)) + 30;
+                        setTimeout(typeWriter, typeSpeed);
+                    } else { typingElement.classList.add('typing-cursor'); }
+                }
+                typeWriter();
+            }, 800);
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); }
+                });
+            }, { root: null, rootMargin: '0px', threshold: 0.15 });
+
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+            const magneticButtons = document.querySelectorAll('.magnetic-btn');
+            magneticButtons.forEach(btn => {
+                btn.addEventListener('mousemove', function(e) {
+                    const position = btn.getBoundingClientRect();
+                    const x = e.pageX - position.left - position.width / 2;
+                    const y = e.pageY - position.top - position.height / 2;
+                    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.4}px)`;
+                    btn.children[0].style.transform = `translate(${x * 0.1}px, ${y * 0.15}px)`; 
+                });
+                btn.addEventListener('mouseout', function(e) {
+                    btn.style.transform = 'translate(0px, 0px)';
+                    btn.children[0].style.transform = 'translate(0px, 0px)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protects | Project All Blue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { cinzel: ['Cinzel', 'serif'], inter: ['Inter', 'sans-serif'], fira: ['"Fira Code"', 'monospace'], } } } }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #0891b2; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .radar-ping { position: absolute; left: 5px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; border-radius: 50%; background: rgba(239, 68, 68, 0.4); animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite; z-index: -1; }
+    </style>
+</head>
+<body class="font-inter text-slate-200 bg-slate-950 overflow-x-hidden antialiased selection:bg-cyan-500/30">
+
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[30rem] h-[30rem] bg-indigo-900/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-slate-800/40 rounded-full blur-[150px]"></div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-950/80 border-b border-cyan-900/30 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+            <a href="index.html" class="font-cinzel text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)] transition-transform hover:scale-105">Project All Blue</a>
+            <ul class="flex space-x-6 md:space-x-8 text-sm md:text-base font-medium text-slate-300">
+                <li><a href="sustains.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Sustains</a></li>
+                <li><a href="protects.html" class="text-cyan-400 border-b-2 border-cyan-400 pb-1">Protects</a></li>
+                <li><a href="inspires.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">Inspires</a></li>
+                <li><a href="story.html" class="hover:text-cyan-400 hover:-translate-y-0.5 inline-block transition-all duration-300">My Story</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="relative pt-40 pb-24 bg-slate-950 text-center px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[url(https://tse1.mm.bing.net/th/id/OIP.-gChuuVQSz1IvetI-QSJewHaE8?w=750&h=500&rs=1&pid=ImgDetMain&o=7&rm=3')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/20 to-slate-950"></div>
+        <div class="relative z-10 max-w-4xl mx-auto reveal active">
+            <h1 class="text-4xl md:text-7xl font-['Cinzel'] font-bold text-white mb-6 drop-shadow-lg tracking-wide">II. Protects</h1>
+            <p class="text-cyan-400 font-['Fira_Code'] tracking-widest uppercase text-sm md:text-base font-semibold mb-8">Navigating the Calm Belt // Ecological Shields</p>
+            <p class="text-lg md:text-xl text-slate-300 font-light leading-relaxed max-w-3xl mx-auto border-l-2 border-cyan-700/50 pl-6 text-left drop-shadow-md">The ocean is Earth's ultimate defense mechanism. It is a vast, silent guardian shielding us from the violent extremes of planetary weather and absorbing the catastrophic brunt of our atmospheric impact.</p>
+        </div>
+    </header>
+
+    <section class="py-24 bg-slate-950 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-['Cinzel'] text-center mb-16 text-white font-bold reveal">Earth's Defense Mechanisms</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="reveal group flex flex-col h-full rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-slate-800 hover:border-cyan-500/50 transition-colors duration-500">
+                    <div class="overflow-hidden h-48 w-full"><img src="https://media.istockphoto.com/id/157443485/photo/mangroves-at-high-tide-west-side-of-bunaken-island-indonesia.jpg?s=612x612&w=0&k=20&c=GvSg3-TO0TdR8S9hqSCMg-ybLg_GRSS01QFGVP8Im3o=" alt="Mangrove Roots" class="w-full h-full object-cover rounded-t-xl group-hover:scale-110 transition-transform duration-700 ease-in-out"></div>
+                    <div class="bg-slate-900/80 p-8 rounded-b-xl border-t-0 flex-grow flex flex-col backdrop-blur-sm">
+                        <h3 class="text-xl font-cinzel text-white font-semibold mb-4">The Mangrove Buffer</h3>
+                        <div class="mb-4"><span class="font-['Fira_Code'] text-4xl font-bold text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.3)]">66%</span></div>
+                        <p class="text-slate-400 font-light leading-relaxed text-sm md:text-base flex-grow">Mangrove forests, acting as the real-world 'Calm Belt', can reduce wave height by up to 66%, blunting the catastrophic force of cyclones.</p>
+                    </div>
+                </div>
+
+                <div class="reveal group flex flex-col h-full rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-slate-800 hover:border-blue-500/50 transition-colors duration-500" style="transition-delay: 100ms;">
+                    <div class="overflow-hidden h-48 w-full"><img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=800&q=80" alt="Coral Reef" class="w-full h-full object-cover rounded-t-xl group-hover:scale-110 transition-transform duration-700 ease-in-out"></div>
+                    <div class="bg-slate-900/80 p-8 rounded-b-xl border-t-0 flex-grow flex flex-col backdrop-blur-sm">
+                        <h3 class="text-xl font-cinzel text-white font-semibold mb-4">The Coral Breakwater</h3>
+                        <div class="mb-4"><span class="font-['Fira_Code'] text-4xl font-bold text-blue-400 drop-shadow-[0_0_8px_rgba(96,165,250,0.3)]">97%</span></div>
+                        <p class="text-slate-400 font-light leading-relaxed text-sm md:text-base flex-grow">Healthy coral reef structures act as submerged seawalls, dissipating up to 97% of incoming wave energy and protecting coastal communities.</p>
+                    </div>
+                </div>
+
+                <div class="reveal group flex flex-col h-full rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-slate-800 hover:border-indigo-500/50 transition-colors duration-500" style="transition-delay: 200ms;">
+                    <div class="overflow-hidden h-48 w-full"><img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80" alt="Deep Ocean" class="w-full h-full object-cover rounded-t-xl group-hover:scale-110 transition-transform duration-700 ease-in-out"></div>
+                    <div class="bg-slate-900/80 p-8 rounded-b-xl border-t-0 flex-grow flex flex-col backdrop-blur-sm">
+                        <h3 class="text-xl font-cinzel text-white font-semibold mb-4">The Climate Sink</h3>
+                        <div class="mb-4"><span class="font-['Fira_Code'] text-4xl font-bold text-indigo-400 drop-shadow-[0_0_8px_rgba(129,140,248,0.3)]">90%</span></div>
+                        <p class="text-slate-400 font-light leading-relaxed text-sm md:text-base flex-grow">The ocean is our ultimate thermal shield, silently absorbing over 90% of the excess heat generated by greenhouse gas emissions.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-red-950/20 border-y border-red-900/30 text-center px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,0,0,0.02)_1px,transparent_1px)] bg-[size:100%_4px] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto relative z-10 reveal">
+            <h3 class="text-2xl md:text-4xl font-cinzel text-red-50 mb-6 tracking-wide drop-shadow-md">The Cost of Our Survival</h3>
+            <p class="text-lg md:text-xl text-slate-300 font-light leading-relaxed mb-8">Absorbing this unprecedented volume of heat and carbon pushes the ocean dangerously past its biological limits. The consequence of our atmospheric pollution is the slow suffocation of the sea.</p>
+            
+            <div class="relative bg-red-950/40 border border-red-500/50 p-6 rounded-lg inline-block shadow-[0_0_30px_rgba(239,68,68,0.2)] backdrop-blur-md">
+                <div class="radar-ping"></div>
+                <p class="font-['Fira_Code'] text-red-400 text-lg md:text-2xl animate-pulse-slow relative z-10 flex items-center justify-center">
+                    <i class="fa-solid fa-triangle-exclamation mr-3 text-red-500"></i>
+                    System Alert: pH levels have dropped by 0.1 since the industrial era—a 30% increase in total acidity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-950 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-3xl md:text-5xl font-['Cinzel'] text-white font-bold mb-6">Restoring the Balance</h2>
+                <p class="text-lg text-slate-400 font-light max-w-2xl mx-auto leading-relaxed">Reciprocity means we cannot just take; we must give back. Here are the actionable solutions to sustain our protector.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="reveal flex flex-col sm:flex-row gap-6 items-center sm:items-start group">
+                    <div class="shrink-0 overflow-hidden rounded-lg shadow-lg border border-slate-700 group-hover:border-cyan-500/50 transition-colors duration-300"><img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=400&q=80" alt="Marine Protected Area" class="w-32 h-32 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                    <div><h4 class="text-xl font-cinzel font-semibold text-cyan-400 mb-3">The 30x30 Initiative</h4><p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">Establishing highly protected Marine Protected Areas (MPAs). The global goal is to protect 30% of the ocean by 2030, giving ecosystems the safe harbor they need to naturally heal.</p></div>
+                </div>
+
+                <div class="reveal flex flex-col sm:flex-row gap-6 items-center sm:items-start group" style="transition-delay: 100ms;">
+                    <div class="shrink-0 overflow-hidden rounded-lg shadow-lg border border-slate-700 group-hover:border-emerald-500/50 transition-colors duration-300"><img src="https://images.prismic.io/ocean-agency-cms/5d53515b-8c4d-4be1-a1c6-bc74f7fb8e83_seagrass+category.jpg?auto=compress,format" alt="Blue Carbon Wetlands" class="w-32 h-32 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                    <div><h4 class="text-xl font-cinzel font-semibold text-emerald-400 mb-3">Blue Carbon Restoration</h4><p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">Shifting from exploiting coastlines to actively replanting 'blue carbon' ecosystems like seagrass meadows and mangroves, which capture carbon 4 times faster than terrestrial forests.</p></div>
+                </div>
+
+                <div class="reveal flex flex-col sm:flex-row gap-6 items-center sm:items-start group" style="transition-delay: 200ms;">
+                    <div class="shrink-0 overflow-hidden rounded-lg shadow-lg border border-slate-700 group-hover:border-amber-500/50 transition-colors duration-300"><img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=400&q=80" alt="Circular Economy Waste" class="w-32 h-32 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                    <div><h4 class="text-xl font-cinzel font-semibold text-amber-400 mb-3">The Circular Economy</h4><p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">Stopping the damage at the source. Implementing circular economies for plastics and agricultural runoff ensures pollutants never reach the Grand Line of our ocean currents.</p></div>
+                </div>
+
+                <div class="reveal flex flex-col sm:flex-row gap-6 items-center sm:items-start group" style="transition-delay: 300ms;">
+                    <div class="shrink-0 overflow-hidden rounded-lg shadow-lg border border-slate-700 group-hover:border-blue-500/50 transition-colors duration-300"><img src="https://th.bing.com/th/id/OIP.QGLKzHaGR3Bge0vBR3v0jwHaEO?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Coastal City Resilience" class="w-32 h-32 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                    <div><h4 class="text-xl font-cinzel font-semibold text-blue-400 mb-3">Climate Resilience Zoning</h4><p class="text-slate-300 font-light leading-relaxed text-sm md:text-base">Redesigning coastal infrastructure in vulnerable cities to work <em>with</em> the water rather than fighting it, incorporating natural floodplains and elevating urban development.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-950 text-center border-t border-slate-800/80 px-6">
+        <div class="max-w-2xl mx-auto">
+            <a href="inspires.html" class="group relative inline-flex items-center justify-center px-10 py-5 font-inter text-sm font-semibold tracking-widest uppercase text-white transition-all duration-300 bg-cyan-950/30 border border-cyan-900 rounded-full hover:bg-cyan-900/50 hover:border-cyan-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] overflow-hidden hover:-translate-y-1">
+                <span class="relative z-10 flex items-center gap-4">Explore How the Deep Sea Inspires Us <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform duration-300 text-cyan-400"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); }
+                });
+            }, { root: null, rootMargin: '0px', threshold: 0.15 });
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                if(!el.classList.contains('active')) revealObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
